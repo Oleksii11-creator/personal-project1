@@ -1,0 +1,348 @@
+/* assets/styles/style.css */
+
+/* Загальні стилі та ресет (можете додати) */
+body {
+    font-family: sans-serif; /* Поки залиште, потім заміните на шрифт з Figma */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px; /* Або ширина контенту з вашої Figma */
+    margin: 0 auto;
+    padding: 0 20px; /* Відступи по боках */
+    display: flex; /* Для вирівнювання елементів у контейнері хедера */
+    justify-content: space-between; /* Рознесе лого і меню по краях */
+    align-items: center; /* Вирівняє по центру по вертикалі */
+    height: 80px; /* Приблизна висота хедера, уточніть по Figma */
+}
+
+/* HEADER СТИЛІ */
+.header {
+    background-color: #6A1B9A; /* Точний колір з Figma (фіолетовий) */
+    color: #fff;
+    padding: 0;
+}
+
+.header .logo {
+    font-size: 24px; /* Розмір з Figma */
+    font-weight: bold; /* Жирність з Figma */
+    text-decoration: none;
+    color: #fff;
+}
+
+/* ГОЛОВНЕ МЕНЮ СТИЛІ */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* Відстань між пунктами меню, уточніть по Figma */
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Колір тексту з Figma */
+    font-size: 16px; /* Розмір з Figma */
+    font-weight: normal; /* Жирність з Figma */
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #E0E0E0; /* Приклад кольору при наведенні, візьміть з Figma */
+}
+
+/* Ефект підкреслення, якщо є у Figma */
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #fff; /* Колір підкреслення */
+    transition: width 0.3s ease;
+}
+
+.main-nav ul li a:hover::after,
+.main-nav ul li a.active::after {
+    width: 100%;
+}
+
+/* Якщо є кнопки або інші елементи праворуч від меню */
+.header-actions {
+    /* Можете додати стилі для вирівнювання кнопок/іконок, якщо вони є у хедері */
+    margin-left: auto; /* Відштовхне від меню вліво */
+}
+
+.header-actions .btn-login {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 8px 15px; /* Уточніть розміри по Figma */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 15px; /* Відступ від попереднього елемента */
+}
+
+.header-actions .btn-login:hover {
+    background-color: #fff;
+    color: #6A1B9A;
+}
+
+/* Стилі для секції героя (першого блоку під хедером) */
+.hero-section {
+    background-color: #7B1FA2; /* Темніший фіолетовий для цієї секції */
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-section .buttons a {
+    display: inline-block;
+    background-color: #fff;
+    color: #6A1B9A;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-section .buttons a:hover {
+    background-color: #eee;
+    color: #5C0E8C;
+}
+
+.hero-section .buttons .secondary-btn {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.hero-section .buttons .secondary-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Ця секція відсутня на наданому зображенні, але єPlaceholder для інших секцій */
+.content-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px; /* Приблизна ширина елементів */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.feature-item img {
+    width: 60px; /* Приблизний розмір іконки */
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Стилі для секції "Популярні тренування" */
+.popular-workouts-section {
+    background-color: #fff; /* Фон білий */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.workout-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.workout-item {
+    background-color: #f0f0f0; /* Легкий сірий фон для карток */
+    border-radius: 10px;
+    overflow: hidden;
+    width: 350px; /* Приблизна ширина картки */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.workout-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.workout-item-content {
+    padding: 20px;
+}
+
+.workout-item h3 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.workout-item p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.workout-item .details {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #999;
+    margin-top: 15px;
+}
+
+.workout-item .details span {
+    margin-right: 15px;
+}
+
+.workout-item .details svg { /* Якщо використовуємо SVG іконки */
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+
+/* Стилі для секції "Готові розпочати..." */
+.cta-section {
+    background-color: #6A1B9A; /* Фіолетовий фон, як у хедері */
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.cta-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-section .cta-button {
+    display: inline-block;
+    background-color: #fff;
+    color: #6A1B9A;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-section .cta-button:hover {
+    background-color: #eee;
+    color: #5C0E8C;
+}
+
+
+/* Стилі для Футера */
+.footer {
+    background-color: #333; /* Темний фон футера */
+    color: #fff;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 0 20px 20px 20px;
+}
+
+.footer .footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer .footer-column p,
+.footer .footer-column ul li a {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer .footer-column ul li a:hover {
+    color: #fff;
+}
+
+.footer .copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #888;
+}
