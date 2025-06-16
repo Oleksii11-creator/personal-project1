@@ -1,0 +1,637 @@
+/* CSS Variables Definition */
+:root {
+    --primary-color: #4F46E5;    /* Ваш основний синій колір */
+    --accent-color: #6366F1;     /* Трохи світліший або інший відтінок для ховерів */
+    --light-gray: #FFFFFF;       /* Білий для фону модалки */
+    --background-color: #f8f9fa; /* Світло-сірий, як основний фон сторінки */
+    --border-color: #dee2e6;     /* Легкий колір рамки */
+}
+
+/* Загальні стилі */
+body {
+    font-family: 'Roboto', sans-serif; /* Переконайся, що цей шрифт підключено правильно в HTML */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa; /* Світло-сірий фон сторінки */
+    color: #343a40; /* Основний темно-сірий колір тексту */
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1140px; /* Адаптивна максимальна ширина контейнера */
+    margin: 0 auto;
+    padding: 0 20px; /* Відступи з боків */
+}
+
+/* Стилі для header */
+.header {
+    background-color: #4F46E5; /* Змінено на світліший колір для верхньої секції */
+    padding: 20px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between; /* Розміщує лого ліворуч, навігацію праворуч */
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* Висота логотипу */
+}
+
+.logo a {
+    font-size: 24px;
+    color: #4F46E5; /* Замініть на колір тексту логотипу */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li:first-child {
+    margin-left: 0;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #212529; /* Темно-сірий колір посилань */
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease; /* Плавна зміна кольору при наведенні */
+}
+
+.main-nav ul li a:hover {
+    color: #007bff; /* Синій колір посилань при наведенні */
+}
+
+.header-actions .btn-login {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #4F46E5; /* Синій колір кнопки увійти */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #4F46E5;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.header-actions .btn-login:hover {
+    background-color: #4F46E5; /* Темніший синій при наведенні */
+    border-color: #4F46E5;
+}
+
+/* Стилі для hero-section (нижньої секції, колір якої ви хочете темнішим) */
+.hero-section {
+    background-color: #4338CA; /* Залишаємо ваш оригінальний колір для нижньої секції */
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-section .container {
+    max-width: 960px;
+}
+
+.hero-section h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero-section p {
+    font-size: 1.25em;
+    line-height: 1.7;
+    color: #f8f9fa;
+    margin-bottom: 30px;
+}
+
+.hero-section .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-section .buttons a {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.hero-section .buttons .primary-btn {
+    background-color: #ffffff;
+    color: #4F46E5;
+    border: 1px solid #ffffff;
+}
+
+.hero-section .buttons .primary-btn:hover {
+    opacity: 0.8;
+}
+
+.hero-section .buttons .secondary-btn {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.hero-section .buttons .secondary-btn:hover {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+/* Стилі для content-section */
+.content-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature-item {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.feature-item img {
+    max-width: 60px;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+/* Стилі для popular-workouts-section */
+.popular-workouts-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.popular-workouts-section h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 40px;
+}
+
+.workout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.workout-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.workout-item img {
+    width: 100%;
+    display: block;
+    height: auto; /* Або задайте фіксовану висоту */
+    object-fit: cover; /* Щоб зображення заповнювало контейнер */
+}
+
+.workout-item-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.workout-item-content h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 10px;
+}
+
+.workout-item-content p {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.workout-item-content .details {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+.workout-item-content .details span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Стилі для cta-section */
+.cta-section {
+    background-color: #4F46E5; /* Синій фон секції CTA */
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.cta-section .container {
+    max-width: 800px;
+}
+
+.cta-section h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.25em;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.cta-section .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #007bff;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-section .cta-button:hover {
+    background-color: #e0f7fa; /* Світлий блакитний при наведенні */
+    color: #4F46E5;
+}
+
+/* Стилі для footer */
+.footer {
+    background-color: #1F2937; /* Темно-сірий фон футера */
+    color: #ffffff;
+    padding: 60px 0;
+    font-size: 0.9em;
+}
+
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.footer h4 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.footer p {
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer ul li a:hover {
+    opacity: 1;
+}
+
+.footer .copyright {
+    margin-top: 30px;
+    text-align: center;
+    grid-column: 1 / -1;
+    opacity: 0.7;
+}
+
+/* Модальні вікна */
+.modal {
+    display: none; /* Приховано за замовчуванням */
+    position: fixed; /* Зафіксовано на екрані */
+    z-index: 1000; /* Розташовано поверх інших елементів */
+    left: 0;
+    top: 0;
+    width: 100%; /* Повна ширина */
+    height: 100%; /* Повна висота */
+    overflow: auto; /* Дозволити прокрутку, якщо вміст завеликий */
+    /* background-color: rgba(0,0,0,0.4); */ /* This line should NOT be here, it's for the overlay! */
+    justify-content: center; /* Центрування по горизонталі */
+    align-items: center; /* Центрування по вертикалі */
+    padding: 20px; /* Відступ від країв */
+}
+
+.modal-content {
+    background-color: var(--light-gray); /* Білий фон для контенту модалки */
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    max-width: 700px; /* Максимальна ширина модалки */
+    width: 90%; /* Ширина на мобільних пристроях */
+    position: relative;
+    text-align: center;
+    transform: translateY(-50px); /* Початкове зміщення для анімації */
+    opacity: 0; /* Приховано для анімації */
+    transition: all 0.3s ease-out;
+}
+
+.modal.active .modal-content {
+    transform: translateY(0); /* Повернення до початкового положення */
+    opacity: 1; /* Проявлення */
+}
+
+.modal-content h2 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-workout-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* 3 колонки, адаптивні */
+    gap: 15px;
+    margin-bottom: 30px;
+    text-align: left; /* Вирівнювання тексту в опціях по лівому краю */
+}
+
+.modal-workout-options .option-item {
+    background-color: var(--background-color); /* Темніший фон для опцій */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color); /* Тонка рамка */
+    transition: background-color 0.3s ease;
+}
+
+.modal-workout-options .option-item:hover {
+    background-color: var(--accent-color); /* Зміна фону при наведенні */
+}
+
+.modal-workout-options .option-item h3 {
+    font-size: 1.2em;
+    color: var(--primary-color); /* Колір заголовка опції */
+    margin-bottom: 5px;
+}
+
+.modal-workout-options .option-item p {
+    font-size: 0.9em;
+    color: #6c757d; /* Колір опису опції */
+    margin-bottom: 0;
+}
+
+.modal-action-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.modal-action-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Стилі для затемнення фону */
+.overlay {
+    display: none; /* Приховано за замовчуванням */
+    position: fixed; /* Зафіксовано на екрані */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Темний, напівпрозорий фон */
+    z-index: 999; /* Повинен бути нижче модального вікна */
+}
+
+/* Якщо модалка активна, показуємо її та оверлей */
+.modal.active {
+    display: flex; /* Показуємо модалку */
+}
+
+.overlay.active {
+    display: block; /* Показуємо оверлей */
+}
+
+/* Адаптивність для модальних вікон */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.8em;
+    }
+
+    .modal-workout-options {
+        grid-template-columns: 1fr; /* Одна колонка на мобільних */
+    }
+}
+
+/* Шапка (Header) */
+.header .logo span {
+    color: #FFFFFF; /* Білий колір для тексту логотипу */
+}
+
+.header .main-nav ul li .nav-item {
+    color: #FFFFFF; /* Білий колір для елементів навігації */
+    transition: color 0.3s ease; /* Для плавного переходу кольору */
+}
+
+.header .main-nav ul li .nav-item:hover {
+    color: var(--accent-color); /* Колір при наведенні, якщо є змінна */
+    /* Або конкретний колір, наприклад: color: #ccc; */
+}
+
+/* Для кнопки "Увійти" */
+.header .main-nav ul li.login-button a {
+    color: #FFFFFF; /* Білий колір для кнопки "Увійти" */
+    border: 1px solid #FFFFFF; /* Біла рамка */
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.header .main-nav ul li.login-button a:hover {
+    background-color: #FFFFFF; /* Білий фон при наведенні */
+    color: var(--primary-color); /* Колір тексту кнопки при наведенні */
+    border-color: var(--primary-color);
+}
+
+/* Для іконки користувача */
+.header .main-nav ul li.user-icon a svg {
+    color: #FFFFFF; /* Білий колір для SVG іконки користувача */
+    transition: color 0.3s ease;
+}
+
+.header .main-nav ul li.user-icon a svg:hover {
+    color: var(--accent-color); /* Колір при наведенні */
+}
+
+/* Login Form Specific Styles for Modal */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between form elements */
+    margin-top: 20px;
+}
+
+.login-form .form-group {
+    text-align: left; /* Align labels to the left */
+}
+
+.login-form label {
+    display: block; /* Make label take full width */
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #343a40; /* Darker color for labels */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px;
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #4F46E5; /* Primary color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.25); /* Light shadow on focus */
+}
+
+.login-form .modal-action-btn {
+    width: 100%;
+    padding: 12px 0; /* Adjust padding for full-width button */
+    border-radius: 5px; /* Less rounded for a more form-like button */
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background-color: #4F46E5; /* Your primary color */
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.login-form .modal-action-btn:hover {
+    background-color: #3f36c4; /* Slightly darker primary color on hover */
+}
+
+.login-form .forgot-password,
+.login-form .register-link {
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.login-form .forgot-password a,
+.login-form .register-link a {
+    color: #4F46E5; /* Primary color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-form .forgot-password a:hover,
+.login-form .register-link a:hover {
+    color: #3f36c4; /* Slightly darker primary color on hover */
+    text-decoration: underline;
+}
+
+/* Ensure modal-content text is centered, but form elements are left-aligned where specified */
+.modal-content {
+    text-align: center; /* This centers the h2 and p elements */
+}
+
+/* Override the text-align for the form group to align labels/inputs left */
+.modal-content .login-form {
+    text-align: left;
+}
